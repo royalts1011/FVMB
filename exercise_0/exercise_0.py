@@ -12,11 +12,11 @@ filter_kernel /= filter_kernel.sum()
 - xy ist Matrix zu Bild equivalenter Größe
 '''
 _, _, m, n = img.shape
-#m = 2
-#n = 4
+#m = 3
+#n = 5
 size = (m * n, m * n)
 xy = torch.arange(m * n)
-
+#xy2 = torch.arange(m * n).view(3,5)
 '''
 Hier wird die Sparse-Matrix für die Filterung in x und y Richtung initialisiert
 Normal geben wir hier folgende Parameter an:
@@ -59,7 +59,8 @@ for i in range(4):
     coefficients_x = torch.stack([xy[i:, :], xy[:m - i, :]], 0).view(2,-1)
     coefficients_y = torch.stack([xy[:, i:], xy[:, :n - i]], 0).view(2,-1)
     # Zur Visualisierung der Indizes in der matrix
-    #print(coefficients_x)
+    # print(coefficients_x)
+    # print(coefficients_x.shape[1])
     A_x += torch.sparse_coo_tensor(coefficients_x, torch.ones(coefficients_x.shape[1]) * filter_kernel[3 + i], size)
     A_y += torch.sparse_coo_tensor(coefficients_y, torch.ones(coefficients_y.shape[1]) * filter_kernel[3 + i], size)
     if i > 0:
@@ -69,7 +70,10 @@ for i in range(4):
 
 print(A_x._nnz())
 print(A_y._nnz())
+
+# Matrizen normal anzeigen !!! Nur mit kleinen Matrizen !!!
 #print(A_x.to_dense())
+#print(A_y.to_dense())
 
 '''
 Bild zu Vektor umbauen und Filter anwenden.
