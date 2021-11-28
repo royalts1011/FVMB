@@ -1,0 +1,10 @@
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_DEPENDS_USE_COMPILER=FALSE -G "CodeBlocks - Unix Makefiles" /Users/falcolentzsch/Develope/FVMB/FVMB/exercise_2/cpp
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE  
+-- Found Torch: /Users/falcolentzsch/Develope/CPP_Libs/libtorch/lib/libtorch.dylib  
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/falcolentzsch/Develope/FVMB/FVMB/exercise_2/cpp/cmake-build-debug

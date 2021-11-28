@@ -7,7 +7,7 @@ img_xy = img.reshape(-1)
 _, _, m, n = img.shape
 
 
-small_dim = False
+small_dim = True
 if small_dim: m,n = 3,3
 size = (m * n, m * n)
 
