@@ -24,7 +24,6 @@ struct DeformableNet : torch::nn::Module {
         grid = F::interpolate(grid,F::InterpolateFuncOptions().mode(torch::kBilinear).align_corners(true)
                                                 .scale_factor(std::vector<double> {6.0, 6.0}));
 
-
         return grid;
     }
 

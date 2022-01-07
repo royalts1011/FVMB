@@ -133,7 +133,7 @@ int main() {
     auto mapped_uv_field = identity_grid + uv;
     warped = F::grid_sample(moving, mapped_uv_field, F::GridSampleFuncOptions().align_corners(true));
 
-
+    F::
 
     //Task2:
 
