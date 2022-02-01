@@ -1,0 +1,6 @@
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_DEPENDS_USE_COMPILER=FALSE -G "CodeBlocks - Unix Makefiles" "/Users/jessekruse/Uni_Code/Master/Master_S3/FVMB/Ex06/Files Exercise 6-20220121/CPP"
+-- Caffe2: Found protobuf with new-style protobuf targets.
+-- Caffe2: Protobuf version 3.17.3
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/jessekruse/Uni_Code/Master/Master_S3/FVMB/Ex06/Files Exercise 6-20220121/CPP/cmake-build-debug
